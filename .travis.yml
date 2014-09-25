@@ -86,7 +86,7 @@ before_install:
   - sudo tail -f /var/log/dmesg &
   - sudo tail -f /var/log/messages &
   - sudo tail -f /var/log/syslog &
-  - sudo tail -f /var/log/cassandra/output.log &
+  - sudo tail -f /var/log/cassandra/system.log &
 
 services:
   - rabbitmq
