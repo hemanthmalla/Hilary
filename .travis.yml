@@ -82,6 +82,11 @@ before_install:
   - printf "\nconfig.previews.pdftk.binary = '/usr/bin/pdftk';" >> config.js
   - printf "\nconfig.previews.pdf2htmlEX.binary = '/usr/bin/pdf2htmlEX';" >> config.js
 
+  # Tail some log files to see if we're being OOM killed
+  - tail -f /var/log/dmesg &
+  - tail -f /var/log/messages &
+  - tail -f /var/log/syslog &
+
 services:
   - rabbitmq
   - redis-server
