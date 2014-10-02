@@ -83,6 +83,7 @@ config.servers = {
 };
 
 var tmpDir = process.env.TMP || process.env.TMPDIR || process.env.TEMP || '/tmp' || process.cwd();
+tmpDir = '/home/hemanth/workspace/oae/temp';
 tmpDir += '/oae';
 
 /**
@@ -106,7 +107,7 @@ config.files = {
         'interval': 2*60*60
     },
     'limit': '4096mb',
-    'localStorageDirectory': '../files'
+    'localStorageDirectory': '/home/hemanth/workspace/oae/temp/files'
 };
 
 // The configuration that can be used to generate secure HTTP cookies.
@@ -394,7 +395,7 @@ config.email = {
  * @param  {Number}     hosts[i].port   The port number on which Hilary will be accessing the etherpad API.
  */
 config.etherpad = {
-    'apikey': '13SirapH8t3kxUh5T5aqWXhXahMzoZRA',
+    'apikey': '766c18766b968e575e9124439958ff35bc8a3362956663357bda718376ab3fa5',
     'hosts': [
         {
             'host': '127.0.0.1',
